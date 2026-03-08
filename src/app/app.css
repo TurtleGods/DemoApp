@@ -1,5 +1,6 @@
 :host {
   display: block;
+  font-family: 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .theme-ocean {
@@ -8,6 +9,8 @@
   --panel-border: #bfdbfe;
   --text: #0f172a;
   --muted: #475569;
+  --card: rgb(255 255 255 / 0.82);
+  --soft-surface: rgb(255 255 255 / 0.72);
   --chip: #dbeafe;
   --chip-text: #1d4ed8;
   --btn: #2563eb;
@@ -19,6 +22,8 @@
   --panel-border: #a7f3d0;
   --text: #052e16;
   --muted: #166534;
+  --card: rgb(255 255 255 / 0.82);
+  --soft-surface: rgb(255 255 255 / 0.72);
   --chip: #d1fae5;
   --chip-text: #047857;
   --btn: #059669;
@@ -30,9 +35,27 @@
   --panel-border: #fed7aa;
   --text: #431407;
   --muted: #9a3412;
+  --card: rgb(255 255 255 / 0.82);
+  --soft-surface: rgb(255 255 255 / 0.72);
   --chip: #ffedd5;
   --chip-text: #c2410c;
   --btn: #ea580c;
+}
+
+.theme-night {
+  --bg:
+    radial-gradient(circle at 15% 20%, rgb(59 130 246 / 0.18), transparent 35%),
+    radial-gradient(circle at 85% 10%, rgb(168 85 247 / 0.2), transparent 32%),
+    linear-gradient(150deg, #020617 0%, #0b1120 42%, #111827 100%);
+  --panel: rgb(15 23 42 / 0.82);
+  --panel-border: rgb(148 163 184 / 0.25);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --card: rgb(30 41 59 / 0.82);
+  --soft-surface: rgb(15 23 42 / 0.75);
+  --chip: rgb(30 41 59 / 0.95);
+  --chip-text: #cbd5e1;
+  --btn: #3b82f6;
 }
 
 .lang-selected {
@@ -41,10 +64,42 @@
 }
 
 .theme-dot {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  margin: 0 0.15rem;
+  cursor: pointer;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
 .theme-dot.active {
   outline-color: var(--btn);
+}
+
+.nav-pill {
+  border-radius: 9999px;
+  border: 1px solid var(--panel-border);
+  background: var(--soft-surface);
+  padding: 0.35rem 0.75rem;
+}
+
+.lang-btn {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn {
+  background: var(--soft-surface);
+}
+
+.surface-switch {
+  background: var(--soft-surface);
+}
+
+.hero {
+  background-image: radial-gradient(circle at 90% 5%, rgb(255 255 255 / 0.65), transparent 35%);
 }

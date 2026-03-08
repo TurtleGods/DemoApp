@@ -1,102 +1,110 @@
-<div class="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors duration-300" [class]="themeClass()">
-  <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-8 md:px-10 md:py-12">
-    <header class="rounded-3xl border border-[var(--panel-border)] bg-[var(--panel)] p-5 shadow-sm backdrop-blur">
-      <div class="flex flex-wrap items-center justify-between gap-4">
-        <div class="inline-flex items-center gap-2 rounded-full bg-[var(--chip)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--chip-text)]">
-          <span>{{ content().heroBadge }}</span>
+<div class="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors duration-500" [class]="themeClass()">
+  <div class="mx-auto w-full max-w-6xl px-4 pb-12 pt-6 md:px-8">
+    <header
+      class="sticky top-4 z-20 rounded-full border border-[var(--panel-border)] bg-[var(--panel)]/85 px-4 py-3 shadow-sm backdrop-blur-xl"
+    >
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="inline-flex items-center gap-2 rounded-full bg-[var(--chip)] px-3 py-1 text-xs font-semibold text-[var(--chip-text)]">
+          {{ content().heroBadge }}
         </div>
-        <div class="flex flex-wrap items-center gap-4">
-          <div class="flex items-center gap-2">
-            <span class="text-sm text-[var(--muted)]">{{ content().languageLabel }}</span>
-            <div class="inline-flex rounded-full border border-[var(--panel-border)] bg-white/50 p-1">
-              <button
-                type="button"
-                class="rounded-full px-3 py-1 text-sm transition lang-button"
-                [class.lang-selected]="language() === 'en'"
-                (click)="setLanguage('en')"
-              >
-                EN
-              </button>
-              <button
-                type="button"
-                class="rounded-full px-3 py-1 text-sm transition lang-button"
-                [class.lang-selected]="language() === 'zh'"
-                (click)="setLanguage('zh')"
-              >
-                {{ content().zhButton }}
-              </button>
-            </div>
+        <nav class="hidden flex-wrap items-center gap-2 text-sm md:flex">
+          <a class="nav-pill" href="#services">{{ content().navServices }}</a>
+          <a class="nav-pill" href="#process">{{ content().navProcess }}</a>
+          <a class="nav-pill" href="#plans">{{ content().navPlans }}</a>
+          <a class="nav-pill" href="#faq">{{ content().navFaq }}</a>
+          <a class="nav-pill" href="#contact">{{ content().navContact }}</a>
+        </nav>
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="surface-switch inline-flex rounded-full border border-[var(--panel-border)] p-1">
+            <button type="button" class="lang-btn" [class.lang-selected]="language() === 'en'" (click)="setLanguage('en')">EN</button>
+            <button type="button" class="lang-btn" [class.lang-selected]="language() === 'zh'" (click)="setLanguage('zh')">
+              {{ content().zhButton }}
+            </button>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="text-sm text-[var(--muted)]">{{ content().themeLabel }}</span>
-            <div class="inline-flex rounded-full border border-[var(--panel-border)] bg-white/50 p-1">
-              <button
-                type="button"
-                class="theme-dot h-7 w-7 rounded-full border border-black/10 bg-[#2563eb]"
-                [class.active]="theme() === 'ocean'"
-                (click)="setTheme('ocean')"
-                aria-label="Ocean theme"
-              ></button>
-              <button
-                type="button"
-                class="theme-dot h-7 w-7 rounded-full border border-black/10 bg-[#059669]"
-                [class.active]="theme() === 'forest'"
-                (click)="setTheme('forest')"
-                aria-label="Forest theme"
-              ></button>
-              <button
-                type="button"
-                class="theme-dot h-7 w-7 rounded-full border border-black/10 bg-[#ea580c]"
-                [class.active]="theme() === 'sunset'"
-                (click)="setTheme('sunset')"
-                aria-label="Sunset theme"
-              ></button>
-            </div>
+          <div class="surface-switch inline-flex rounded-full border border-[var(--panel-border)] p-1">
+            <button type="button" class="theme-dot bg-[#2563eb]" [class.active]="theme() === 'ocean'" (click)="setTheme('ocean')"></button>
+            <button type="button" class="theme-dot bg-[#059669]" [class.active]="theme() === 'forest'" (click)="setTheme('forest')"></button>
+            <button type="button" class="theme-dot bg-[#ea580c]" [class.active]="theme() === 'sunset'" (click)="setTheme('sunset')"></button>
+            <button type="button" class="theme-dot bg-[#0f172a]" [class.active]="theme() === 'night'" (click)="setTheme('night')"></button>
           </div>
         </div>
       </div>
     </header>
 
-    <main class="grid gap-6 lg:grid-cols-3">
-      <section class="rounded-3xl border border-[var(--panel-border)] bg-[var(--panel)] p-8 lg:col-span-2">
-        <h1 class="max-w-2xl text-3xl font-bold leading-tight md:text-5xl">
-          {{ content().heroTitle }}
-        </h1>
-        <p class="mt-4 max-w-2xl text-base text-[var(--muted)] md:text-lg">
-          {{ content().heroSubtitle }}
-        </p>
+    <main class="mt-8 space-y-6">
+      <section class="hero rounded-[2.25rem] border border-[var(--panel-border)] bg-[var(--panel)] p-8 md:p-14">
+        <p class="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--muted)]">{{ content().trustLine }}</p>
+        <h1 class="mt-4 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">{{ content().heroTitle }}</h1>
+        <p class="mt-5 max-w-3xl text-base leading-7 text-[var(--muted)] md:text-lg">{{ content().heroSubtitle }}</p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <button type="button" class="rounded-full bg-[var(--btn)] px-5 py-2.5 text-sm font-semibold text-white">
-            {{ content().ctaPrimary }}
-          </button>
-          <button
-            type="button"
-            class="rounded-full border border-[var(--panel-border)] bg-white/70 px-5 py-2.5 text-sm font-semibold text-[var(--text)]"
-          >
+          <button class="rounded-full bg-[var(--btn)] px-6 py-3 text-sm font-semibold text-white">{{ content().ctaPrimary }}</button>
+          <a href="#services" class="secondary-btn rounded-full border border-[var(--panel-border)] px-6 py-3 text-sm font-semibold">
             {{ content().ctaSecondary }}
-          </button>
+          </a>
         </div>
       </section>
 
-      <section class="rounded-3xl border border-[var(--panel-border)] bg-[var(--panel)] p-6">
-        <h2 class="text-lg font-semibold">{{ content().aboutTitle }}</h2>
-        <p class="mt-3 text-sm leading-6 text-[var(--muted)]">{{ content().aboutBody }}</p>
-      </section>
-
-      <section class="rounded-3xl border border-[var(--panel-border)] bg-[var(--panel)] p-6 lg:col-span-2">
-        <h2 class="text-lg font-semibold">{{ content().skillsTitle }}</h2>
-        <div class="mt-4 grid gap-3 sm:grid-cols-2">
-          @for (item of content().skills; track item) {
-            <div class="rounded-2xl border border-[var(--panel-border)] bg-white/70 p-4 text-sm">
-              {{ item }}
-            </div>
+      <section id="services" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+        <h2 class="text-2xl font-semibold">{{ content().servicesTitle }}</h2>
+        <div class="mt-4 grid gap-3 md:grid-cols-2">
+          @for (item of content().services; track item) {
+            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-5 text-sm md:text-base">{{ item }}</article>
           }
         </div>
       </section>
 
-      <section class="rounded-3xl border border-[var(--panel-border)] bg-[var(--panel)] p-6">
-        <h2 class="text-lg font-semibold">{{ content().contactTitle }}</h2>
-        <p class="mt-3 text-sm leading-6 text-[var(--muted)]">{{ content().contactBody }}</p>
+      <section id="process" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+        <h2 class="text-2xl font-semibold">{{ content().processTitle }}</h2>
+        <div class="mt-4 grid gap-3 md:grid-cols-2">
+          @for (item of content().process; track item) {
+            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-5 text-sm md:text-base">{{ item }}</article>
+          }
+        </div>
+      </section>
+
+      <section id="plans" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+        <h2 class="text-2xl font-semibold">{{ content().plansTitle }}</h2>
+        <div class="mt-4 grid gap-3 md:grid-cols-3">
+          @for (plan of content().plans; track plan.name) {
+            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-6">
+              <h3 class="text-lg font-semibold">{{ plan.name }}</h3>
+              <p class="mt-2 text-sm leading-6 text-[var(--muted)]">{{ plan.detail }}</p>
+            </article>
+          }
+        </div>
+      </section>
+
+      <section class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+        <h2 class="text-2xl font-semibold">{{ content().showcaseTitle }}</h2>
+        <div class="mt-4 grid gap-3 md:grid-cols-3">
+          @for (item of content().showcases; track item.title) {
+            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-6">
+              <h3 class="text-base font-semibold">{{ item.title }}</h3>
+              <p class="mt-2 text-sm leading-6 text-[var(--muted)]">{{ item.detail }}</p>
+            </article>
+          }
+        </div>
+      </section>
+
+      <section id="faq" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+        <h2 class="text-2xl font-semibold">{{ content().faqTitle }}</h2>
+        <div class="mt-4 grid gap-3">
+          @for (item of content().faqs; track item.q) {
+            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-5">
+              <h3 class="text-sm font-semibold md:text-base">{{ item.q }}</h3>
+              <p class="mt-2 text-sm leading-6 text-[var(--muted)]">{{ item.a }}</p>
+            </article>
+          }
+        </div>
+      </section>
+
+      <section id="contact" class="rounded-[2.25rem] border border-[var(--panel-border)] bg-[var(--panel)] p-8 md:p-12">
+        <h2 class="text-3xl font-semibold md:text-4xl">{{ content().closingTitle }}</h2>
+        <p class="mt-4 max-w-3xl text-sm leading-7 text-[var(--muted)] md:text-base">{{ content().closingBody }}</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <button class="rounded-full bg-[var(--btn)] px-6 py-3 text-sm font-semibold text-white">{{ content().closingCta }}</button>
+          <span class="text-sm text-[var(--muted)]">{{ content().contactBody }}</span>
+        </div>
       </section>
     </main>
   </div>

@@ -1,0 +1,50 @@
+:host {
+  display: block;
+}
+
+.theme-ocean {
+  --bg: linear-gradient(140deg, #eff6ff 0%, #dbeafe 45%, #ecfeff 100%);
+  --panel: #ffffffd9;
+  --panel-border: #bfdbfe;
+  --text: #0f172a;
+  --muted: #475569;
+  --chip: #dbeafe;
+  --chip-text: #1d4ed8;
+  --btn: #2563eb;
+}
+
+.theme-forest {
+  --bg: linear-gradient(140deg, #ecfdf5 0%, #d1fae5 45%, #f0fdf4 100%);
+  --panel: #ffffffe0;
+  --panel-border: #a7f3d0;
+  --text: #052e16;
+  --muted: #166534;
+  --chip: #d1fae5;
+  --chip-text: #047857;
+  --btn: #059669;
+}
+
+.theme-sunset {
+  --bg: linear-gradient(140deg, #fff7ed 0%, #ffedd5 45%, #fef3c7 100%);
+  --panel: #ffffffd9;
+  --panel-border: #fed7aa;
+  --text: #431407;
+  --muted: #9a3412;
+  --chip: #ffedd5;
+  --chip-text: #c2410c;
+  --btn: #ea580c;
+}
+
+.lang-selected {
+  background-color: var(--btn);
+  color: #ffffff;
+}
+
+.theme-dot {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.theme-dot.active {
+  outline-color: var(--btn);
+}

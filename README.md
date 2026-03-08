@@ -2,6 +2,15 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
 
+## Demo Scope
+
+This app is now a portfolio demo page with:
+
+- English / Traditional Chinese language switching
+- Tailwind-styled theme switching (Ocean / Forest / Sunset)
+- Placeholder sections for profile, skills, and contact info
+- Backend intentionally deferred for a later phase
+
 ## Development server
 
 To start a local development server, run:
@@ -35,6 +44,15 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Azure App Service (Web App) notes
+
+Use Node.js runtime on Azure Web App and run the SSR server bundle:
+
+1. Build: `npm run build`
+2. Start command on App Service: `node dist/demo-app/server/server.mjs`
+3. Set app setting `WEBSITE_NODE_DEFAULT_VERSION` to a modern LTS (Node 20+ recommended)
+4. Deploy with your preferred method (ZIP deploy, GitHub Actions, or Azure DevOps)
 
 ## Running unit tests
 

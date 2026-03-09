@@ -5,6 +5,7 @@
 
 .theme-ocean {
   --bg: linear-gradient(140deg, #eff6ff 0%, #dbeafe 45%, #ecfeff 100%);
+  --header: #e0f2fe;
   --panel: #ffffffd9;
   --panel-border: #bfdbfe;
   --text: #0f172a;
@@ -18,6 +19,7 @@
 
 .theme-forest {
   --bg: linear-gradient(140deg, #ecfdf5 0%, #d1fae5 45%, #f0fdf4 100%);
+  --header: #dcfce7;
   --panel: #ffffffe0;
   --panel-border: #a7f3d0;
   --text: #052e16;
@@ -31,6 +33,7 @@
 
 .theme-sunset {
   --bg: linear-gradient(140deg, #fff7ed 0%, #ffedd5 45%, #fef3c7 100%);
+  --header: #ffedd5;
   --panel: #ffffffd9;
   --panel-border: #fed7aa;
   --text: #431407;
@@ -47,6 +50,7 @@
     radial-gradient(circle at 15% 20%, rgb(59 130 246 / 0.18), transparent 35%),
     radial-gradient(circle at 85% 10%, rgb(168 85 247 / 0.2), transparent 32%),
     linear-gradient(150deg, #020617 0%, #0b1120 42%, #111827 100%);
+  --header: rgb(15 23 42 / 0.9);
   --panel: rgb(15 23 42 / 0.82);
   --panel-border: rgb(148 163 184 / 0.25);
   --text: #e2e8f0;

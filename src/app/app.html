@@ -44,7 +44,7 @@
         </div>
       </section>
 
-      <section id="services" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+      <section id="services" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
         <h2 class="text-2xl font-semibold">{{ content().servicesTitle }}</h2>
         <div class="mt-4 grid gap-3 md:grid-cols-2">
           @for (item of content().services; track item) {
@@ -53,7 +53,7 @@
         </div>
       </section>
 
-      <section id="process" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+      <section id="process" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
         <h2 class="text-2xl font-semibold">{{ content().processTitle }}</h2>
         <div class="mt-4 grid gap-3 md:grid-cols-2">
           @for (item of content().process; track item) {
@@ -62,7 +62,7 @@
         </div>
       </section>
 
-      <section id="plans" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+      <section id="plans" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
         <h2 class="text-2xl font-semibold">{{ content().plansTitle }}</h2>
         <div class="mt-4 grid gap-3 md:grid-cols-3">
           @for (plan of content().plans; track plan.name) {
@@ -86,7 +86,7 @@
         </div>
       </section>
 
-      <section id="faq" class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
+      <section id="faq" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
         <h2 class="text-2xl font-semibold">{{ content().faqTitle }}</h2>
         <div class="mt-4 grid gap-3">
           @for (item of content().faqs; track item.q) {
@@ -98,7 +98,7 @@
         </div>
       </section>
 
-      <section id="contact" class="rounded-[2.25rem] border border-[var(--panel-border)] bg-[var(--panel)] p-8 md:p-12">
+      <section id="contact" class="scroll-mt-24 rounded-[2.25rem] border border-[var(--panel-border)] bg-[var(--panel)] p-8 md:p-12">
         <h2 class="text-3xl font-semibold md:text-4xl">{{ content().closingTitle }}</h2>
         <p class="mt-4 max-w-3xl text-sm leading-7 text-[var(--muted)] md:text-base">{{ content().closingBody }}</p>
         <div class="mt-6 flex flex-wrap items-center gap-3">

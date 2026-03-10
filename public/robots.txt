@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://demopage-ekbvdgaygqfqafd2.southeastasia-01.azurewebsites.net/sitemap.xml

@@ -4,8 +4,11 @@
   >
     <div class="mx-auto w-full max-w-6xl px-4 py-3 md:px-8">
       <div class="flex flex-wrap items-center justify-between gap-3">
-        <div class="inline-flex items-center gap-2 rounded-full bg-[var(--chip)] px-3 py-1 text-xs font-semibold text-[var(--chip-text)]">
-          {{ content().heroBadge }}
+        <div class="flex items-center gap-3">
+          <img src="pigeon-pack.svg" alt="鴿子封包" class="h-11 w-11 rounded-2xl border border-[var(--panel-border)] bg-white/70 p-1 shadow-sm">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[var(--chip)] px-3 py-1 text-xs font-semibold text-[var(--chip-text)]">
+            {{ content().heroBadge }}
+          </div>
         </div>
         <nav class="hidden flex-wrap items-center gap-2 text-sm md:flex">
           <a class="nav-pill" href="#services">{{ content().navServices }}</a>
@@ -101,8 +104,16 @@
       </section>
 
       <section id="contact" class="scroll-mt-24 rounded-[2.25rem] border border-[var(--panel-border)] bg-[var(--panel)] p-8 md:p-12">
-        <h2 class="text-3xl font-semibold md:text-4xl">{{ content().closingTitle }}</h2>
+        <h2 class="text-3xl font-semibold md:text-4xl">{{ content().contactTitle }}</h2>
         <p class="mt-4 max-w-3xl text-sm leading-7 text-[var(--muted)] md:text-base">{{ content().closingBody }}</p>
+        <div class="mt-6 grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+          @for (item of content().contactInfo; track item.label) {
+            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-4">
+              <p class="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">{{ item.label }}</p>
+              <p class="mt-2 text-sm font-medium text-[var(--text)]">{{ item.value }}</p>
+            </article>
+          }
+        </div>
         <div class="mt-6 flex flex-wrap items-center gap-3">
           <button class="rounded-full bg-[var(--btn)] px-6 py-3 text-sm font-semibold text-white">{{ content().closingCta }}</button>
           <span class="text-sm text-[var(--muted)]">{{ content().contactBody }}</span>

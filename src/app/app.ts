@@ -97,7 +97,14 @@ const COPY = {
     closingBody: 'Share your requirement document or idea draft, and we can turn it into an actionable delivery plan.',
     closingCta: 'Book Intro Call',
     contactTitle: 'Contact',
-    contactBody: 'Email: strollist@gmail.com | Services: GCP, AWS, Azure cloud setup, Angular frontend, C# Java PHP backend development'
+    contactBody: 'Ready when you are.',
+    contactInfo: [
+      { label: 'Email', value: 'strollist@gmail.com' },
+      { label: 'Cloud Infrastructure', value: 'GCP, AWS, Azure' },
+      { label: 'Frontend', value: 'Angular frontend development' },
+      { label: 'Backend', value: 'C# / Java / PHP backend development' },
+      { label: 'Container', value: 'Kubernetes deployment' }
+    ]
   },
   zh: {
     languageLabel: '語言',
@@ -140,6 +147,13 @@ const COPY = {
     closingBody: '提供你的需求文件或想法草稿，我可以協助整理成可執行的交付計畫。',
     closingCta: '預約初談',
     contactTitle: '聯絡方式',
-    contactBody: 'email: strollist@gmail.com / 服務項目: GCP、AWS、Azure雲端架設 / Angular前端 / C# Java PHP後端開發'
+    contactBody: '隨時和我聯繫，討論你的專案需求與時程。',
+    contactInfo: [
+      { label: 'Email', value: 'strollist@gmail.com' },
+      { label: '雲端服務', value: 'GCP、AWS、Azure 雲端架設' },
+      { label: '前端', value: 'Angular 前端開發' },
+      { label: '後端', value: 'C# / Java / PHP 後端開發' },
+      { label: '容器平台', value: 'k8s 架設' }
+    ]
   }
 } as const;

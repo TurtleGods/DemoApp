@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Pigeon Pack logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dff7fb" />
+      <stop offset="55%" stop-color="#93ddf0" />
+      <stop offset="100%" stop-color="#2378df" />
+    </linearGradient>
+    <linearGradient id="wing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ae0d4" />
+      <stop offset="100%" stop-color="#0b9fda" />
+    </linearGradient>
+    <linearGradient id="body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a8ff2" />
+      <stop offset="100%" stop-color="#1b49a8" />
+    </linearGradient>
+    <linearGradient id="box" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd889" />
+      <stop offset="100%" stop-color="#d88932" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect x="18" y="18" width="220" height="220" rx="34" fill="url(#bg)" filter="url(#shadow)"/>
+  <path d="M20 204c56-8 111-24 169-51 16-8 32-17 49-28v95H18Z" fill="#10c7c3" opacity=".65"/>
+  <path d="M151 51c21 0 36 14 36 33 0 11-5 20-13 28l2 24-29-10c-7 2-14 3-21 3-20 0-37-12-44-31l15-9c7-22 27-38 54-38Z" fill="url(#body)" stroke="#10205f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M105 111c-23 16-45 30-65 41 18 15 42 23 68 21 16-1 29-6 41-15-18-11-31-26-44-47Z" fill="url(#wing)" stroke="#10205f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M93 148c14 13 34 21 54 20 6 0 12-1 18-2-12 10-29 18-48 19-24 1-47-7-65-23l20-14Z" fill="#1a2f88" opacity=".95"/>
+  <path d="M115 131c10 15 25 28 41 35-7 2-15 4-23 4-19 1-37-5-52-17 11-6 23-13 34-22Z" fill="#dfe7ef"/>
+  <path d="M155 95l25 7-17 8Z" fill="#f6d4a4" stroke="#10205f" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="160" cy="72" r="9" fill="#ffffff" stroke="#10205f" stroke-width="4"/>
+  <circle cx="160" cy="72" r="4" fill="#111827"/>
+  <circle cx="163" cy="69" r="1.5" fill="#ffffff"/>
+  <path d="M134 116h61v56h-61Z" fill="url(#box)" stroke="#8a4d10" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M134 116l29-12 32 12-30 12Z" fill="#ffe9ba" stroke="#8a4d10" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M163 104v24" stroke="#8a4d10" stroke-width="4"/>
+  <path d="M146 108l11 4" stroke="#8a4d10" stroke-width="4"/>
+  <path d="M173 110l11-4" stroke="#8a4d10" stroke-width="4"/>
+  <rect x="151" y="114" width="10" height="18" rx="3" fill="#e7d0a4"/>
+  <rect x="175" y="114" width="10" height="18" rx="3" fill="#f2e6d2"/>
+  <path d="M111 181c4 10 10 16 17 16 4 0 8-2 12-6" fill="none" stroke="#8c2d2d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M128 180c4 10 10 16 18 16 4 0 8-2 11-6" fill="none" stroke="#8c2d2d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M111 198c10 1 25 1 44 0" fill="none" stroke="#10205f" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -115,7 +115,12 @@
           }
         </div>
         <div class="mt-6 flex flex-wrap items-center gap-3">
-          <button class="rounded-full bg-[var(--btn)] px-6 py-3 text-sm font-semibold text-white">{{ content().closingCta }}</button>
+          <a
+            class="rounded-full bg-[var(--btn)] px-6 py-3 text-sm font-semibold text-white"
+            href="{{ content().closingConsultationMailto }}"
+          >
+            {{ content().closingCta }}
+          </a>
           <span class="text-sm text-[var(--muted)]">{{ content().contactBody }}</span>
         </div>
       </section>

@@ -54,11 +54,36 @@ const COPY = {
     navPlans: 'Plans',
     navFaq: 'FAQ',
     navContact: 'Contact',
-    heroTitle: 'One-page outsourcing proposal for your next project.',
-    heroSubtitle:
-      'Use this SPA to explain what you can deliver, how collaboration works, and what clients should prepare before project kickoff.',
+    heroTitle: 'Pigeon Packet, Delivered for Sure.',
+    heroSubtitle: 'We help clients craft tailored websites and web pages that match their business needs.',
     ctaPrimary: 'Start a Discussion',
     ctaSecondary: 'See Service Scope',
+    // 初步約談 mailto 原文：
+    // subject: Initial consultation - Custom web project inquiry
+    // body:
+    // Hi team,
+    // I want to discuss a web customization project.
+    // Project type:
+    // Budget:
+    // Deadline:
+    // Notes:
+    //
+    // Thank you.
+    initialConsultationMailto:
+      'mailto:strollist@gmail.com?subject=Initial%20Consultation%20-%20Custom%20Web%20Project%20Inquiry&body=Hi%20team%2C%0A%0AI%20want%20to%20discuss%20a%20web%20customization%20project.%0AProject%20type%3A%0ABudget%3A%0ADeadline%3A%0ANotes%3A%0A%0AThank%20you.',
+    // 結尾區段約談 mailto 原文（與初步約談內容一致，可自行改成不同模板）：
+    // subject: Book intro call
+    // body:
+    // Hi team,
+    // I want to discuss a web customization project.
+    // Project type:
+    // Budget:
+    // Deadline:
+    // Notes:
+    //
+    // Thank you.
+    closingConsultationMailto:
+      'mailto:strollist@gmail.com?subject=Book%20Intro%20Call&body=Hi%20team%2C%0A%0AI%20want%20to%20discuss%20a%20web%20customization%20project.%0AProject%20type%3A%0ABudget%3A%0ADeadline%3A%0ANotes%3A%0A%0AThank%20you.',
     trustLine: 'Trusted workflow for fast-moving teams',
     servicesTitle: 'Service Scope',
     services: [
@@ -115,10 +140,35 @@ const COPY = {
     navPlans: '方案範例',
     navFaq: '常見問題',
     navContact: '聯絡方式',
-    heroTitle: '一頁式外包需求介紹頁，快速讓客戶了解你的交付能力。',
-    heroSubtitle: '這個 Angular 示範頁已支援中英文切換與主題切換，之後可直接替換成你的真實履歷與能力內容。',
+    heroTitle: '鴿子封包，絕對送達',
+    heroSubtitle: '提供從需求規劃到實作交付的一站式客製化網頁服務，打造符合你需求的網站。',
     ctaPrimary: '立即洽談需求',
     ctaSecondary: '查看服務範圍',
+    // 初步約談 mailto 中文原文：
+    // subject: 初步約談 - 客製化網站合作諮詢
+    // body:
+    // 您好，我想預約初步諮詢。以下是專案重點：
+    // 1) 專案類型：
+    // 2) 需求簡述：
+    // 3) 預算：
+    // 4) 預計上線時間：
+    // 5) 參考範例：
+    // 6) 其他補充：
+    initialConsultationMailto:
+      'mailto:strollist@gmail.com?subject=%E5%88%9D%E6%AD%A5%E7%B4%84%E8%AB%87%20-%20%E5%AE%A2%E8%A3%BD%E5%8C%96%E7%B6%B2%E7%AB%99%E5%90%88%E4%BD%9C%E8%A9%A2%E8%A2%BC&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%E5%88%9D%E6%AD%A5%E8%AB%AE%E8%A9%A2%E3%80%82%E4%BB%A5%E4%B8%8B%E6%98%AF%E5%B0%88%E6%A1%88%E9%87%8D%E9%BB%9E%EF%BC%9A%0A1)%20%E5%B0%88%E6%A1%88%E9%A1%9E%E5%9E%8B%EF%BC%9A%0A2)%20%E9%9C%80%E6%B1%82%E7%B0%A1%E8%BF%B0%EF%BC%9A%0A3)%20%E9%A0%90%E7%AE%97%EF%BC%9A%0A4)%20%E9%A0%90%E8%A8%88%E4%B8%8A%E7%B7%9A%E6%99%82%E9%96%93%EF%BC%9A%0A5)%20%E5%8F%83%E8%80%83%E7%AF%84%E4%BE%8B%EF%BC%9A%0A6)%20%E5%85%B6%E4%BB%96%E8%A3%9C%E5%85%85%EF%BC%9A',
+    // 結尾約談 mailto 中文原文：
+    // subject: 預約初談
+    // body:
+    // 您好，想預約初步諮詢。
+    // 專案重點（可直接修改）：
+    // 1) 專案類型：
+    // 2) 需求簡述：
+    // 3) 預算：
+    // 4) 預計上線時間：
+    // 5) 參考範例：
+    // 6) 其他補充：
+    closingConsultationMailto:
+      'mailto:strollist@gmail.com?subject=%E9%A0%90%E7%B4%84%E5%88%9D%E8%AB%87&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%E5%88%9D%E6%AD%A5%E8%AB%AE%E8%A9%A2%E3%80%82%E4%BB%A5%E4%B8%8B%E6%98%AF%E5%B0%88%E6%A1%88%E9%87%8D%E9%BB%9E%EF%BC%9A%0A1)%20%E5%B0%88%E6%A1%88%E9%A1%9E%E5%9E%8B%EF%BC%9A%0A2)%20%E9%9C%80%E6%B1%82%E7%B0%A1%E8%BF%B0%EF%BC%9A%0A3)%20%E9%A0%90%E7%AE%97%EF%BC%9A%0A4)%20%E9%A0%90%E8%A8%88%E4%B8%8A%E7%B7%9A%E6%99%82%E9%96%93%EF%BC%9A%0A5)%20%E5%8F%83%E8%80%83%E7%AF%84%E4%BE%8B%EF%BC%9A%0A6)%20%E5%85%B6%E4%BB%96%E8%A3%9C%E5%85%85%EF%BC%9A',
     trustLine: '快速團隊也能安心採用的合作流程',
     servicesTitle: '服務範圍',
     services: ['形象網站與活動頁製作', '後台系統與內部工具前端開發', 'API 串接與資料視覺化', 'Azure 可部署架構與 CI/CD 建置'],

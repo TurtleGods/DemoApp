@@ -97,7 +97,7 @@ const COPY = {
     closingBody: 'Share your requirement document or idea draft, and we can turn it into an actionable delivery plan.',
     closingCta: 'Book Intro Call',
     contactTitle: 'Contact',
-    contactBody: 'Add your email / LINE / WhatsApp / Calendly here for inquiry routing.'
+    contactBody: 'Email: strollist@gmail.com | Services: GCP, AWS, Azure cloud setup, Angular frontend, C# Java PHP backend development'
   },
   zh: {
     languageLabel: '語言',
@@ -140,6 +140,6 @@ const COPY = {
     closingBody: '提供你的需求文件或想法草稿，我可以協助整理成可執行的交付計畫。',
     closingCta: '預約初談',
     contactTitle: '聯絡方式',
-    contactBody: '可放 Email / LINE / WhatsApp / 預約連結，讓客戶快速聯繫。'
+    contactBody: 'email: strollist@gmail.com / 服務項目: GCP、AWS、Azure雲端架設 / Angular前端 / C# Java PHP後端開發'
   }
 } as const;

@@ -48,7 +48,7 @@ const COPY = {
   en: {
     languageLabel: 'Language',
     themeLabel: 'Theme',
-    heroBadge: 'Outsourcing Service',
+    heroBadge: 'Pigeon Outsourcing Service',
     navServices: 'Services',
     navProcess: 'Process',
     navPlans: 'Plans',
@@ -134,7 +134,7 @@ const COPY = {
   zh: {
     languageLabel: '語言',
     themeLabel: '主題',
-    heroBadge: '外包服務介紹',
+    heroBadge: '鴿子外包服務介紹',
     navServices: '服務項目',
     navProcess: '合作流程',
     navPlans: '方案範例',

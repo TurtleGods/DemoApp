@@ -70,7 +70,7 @@ const COPY = {
     //
     // Thank you.
     initialConsultationMailto:
-      'mailto:pigeonpacket.tech@gmail.com?subject=Initial%20Consultation%20-%20Custom%20Web%20Project%20Inquiry&body=Hi%20team%2C%0A%0AI%20want%20to%20discuss%20a%20web%20customization%20project.%0AProject%20type%3A%0ABudget%3A%0ADeadline%3A%0ANotes%3A%0A%0AThank%20you.',
+      'mailto:pigeon@pigeon-packet.com?subject=Initial%20Consultation%20-%20Custom%20Web%20Project%20Inquiry&body=Hi%20team%2C%0A%0AI%20want%20to%20discuss%20a%20web%20customization%20project.%0AProject%20type%3A%0ABudget%3A%0ADeadline%3A%0ANotes%3A%0A%0AThank%20you.',
     // 結尾區段約談 mailto 原文（與初步約談內容一致，可自行改成不同模板）：
     // subject: Book intro call
     // body:
@@ -83,7 +83,7 @@ const COPY = {
     //
     // Thank you.
     closingConsultationMailto:
-      'mailto:pigeonpacket.tech@gmail.com?subject=Book%20Intro%20Call&body=Hi%20team%2C%0A%0AI%20want%20to%20discuss%20a%20web%20customization%20project.%0AProject%20type%3A%0ABudget%3A%0ADeadline%3A%0ANotes%3A%0A%0AThank%20you.',
+      'mailto:pigeon@pigeon-packet.com?subject=Book%20Intro%20Call&body=Hi%20team%2C%0A%0AI%20want%20to%20discuss%20a%20web%20customization%20project.%0AProject%20type%3A%0ABudget%3A%0ADeadline%3A%0ANotes%3A%0A%0AThank%20you.',
     trustLine: 'Trusted workflow for fast-moving teams',
     servicesTitle: 'Service Scope',
     services: [
@@ -124,7 +124,7 @@ const COPY = {
     contactTitle: 'Contact',
     contactBody: 'Ready when you are.',
     contactInfo: [
-      { label: 'Email', value: 'pigeonpacket.tech@gmail.com' },
+      { label: 'Email', value: 'pigeon@pigeon-packet.com' },
       { label: 'Cloud Infrastructure', value: 'GCP, AWS, Azure' },
       { label: 'Frontend', value: 'Angular frontend development' },
       { label: 'Backend', value: 'C# / Java / PHP backend development' },
@@ -155,7 +155,7 @@ const COPY = {
     // 5) 參考範例：
     // 6) 其他補充：
     initialConsultationMailto:
-      'mailto:pigeonpacket.tech@gmail.com?subject=%E5%88%9D%E6%AD%A5%E7%B4%84%E8%AB%87%20-%20%E5%AE%A2%E8%A3%BD%E5%8C%96%E7%B6%B2%E7%AB%99%E5%90%88%E4%BD%9C%E8%A9%A2%E8%A2%BC&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%E5%88%9D%E6%AD%A5%E8%AB%AE%E8%A9%A2%E3%80%82%E4%BB%A5%E4%B8%8B%E6%98%AF%E5%B0%88%E6%A1%88%E9%87%8D%E9%BB%9E%EF%BC%9A%0A1)%20%E5%B0%88%E6%A1%88%E9%A1%9E%E5%9E%8B%EF%BC%9A%0A2)%20%E9%9C%80%E6%B1%82%E7%B0%A1%E8%BF%B0%EF%BC%9A%0A3)%20%E9%A0%90%E7%AE%97%EF%BC%9A%0A4)%20%E9%A0%90%E8%A8%88%E4%B8%8A%E7%B7%9A%E6%99%82%E9%96%93%EF%BC%9A%0A5)%20%E5%8F%83%E8%80%83%E7%AF%84%E4%BE%8B%EF%BC%9A%0A6)%20%E5%85%B6%E4%BB%96%E8%A3%9C%E5%85%85%EF%BC%9A',
+      'mailto:pigeon@pigeon-packet.com?subject=%E5%88%9D%E6%AD%A5%E7%B4%84%E8%AB%87%20-%20%E5%AE%A2%E8%A3%BD%E5%8C%96%E7%B6%B2%E7%AB%99%E5%90%88%E4%BD%9C%E8%A9%A2%E8%A2%BC&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%E5%88%9D%E6%AD%A5%E8%AB%AE%E8%A9%A2%E3%80%82%E4%BB%A5%E4%B8%8B%E6%98%AF%E5%B0%88%E6%A1%88%E9%87%8D%E9%BB%9E%EF%BC%9A%0A1)%20%E5%B0%88%E6%A1%88%E9%A1%9E%E5%9E%8B%EF%BC%9A%0A2)%20%E9%9C%80%E6%B1%82%E7%B0%A1%E8%BF%B0%EF%BC%9A%0A3)%20%E9%A0%90%E7%AE%97%EF%BC%9A%0A4)%20%E9%A0%90%E8%A8%88%E4%B8%8A%E7%B7%9A%E6%99%82%E9%96%93%EF%BC%9A%0A5)%20%E5%8F%83%E8%80%83%E7%AF%84%E4%BE%8B%EF%BC%9A%0A6)%20%E5%85%B6%E4%BB%96%E8%A3%9C%E5%85%85%EF%BC%9A',
     // 結尾約談 mailto 中文原文：
     // subject: 預約初談
     // body:
@@ -168,7 +168,7 @@ const COPY = {
     // 5) 參考範例：
     // 6) 其他補充：
     closingConsultationMailto:
-      'mailto:pigeonpacket.tech@gmail.com?subject=%E9%A0%90%E7%B4%84%E5%88%9D%E8%AB%87&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%E5%88%9D%E6%AD%A5%E8%AB%AE%E8%A9%A2%E3%80%82%E4%BB%A5%E4%B8%8B%E6%98%AF%E5%B0%88%E6%A1%88%E9%87%8D%E9%BB%9E%EF%BC%9A%0A1)%20%E5%B0%88%E6%A1%88%E9%A1%9E%E5%9E%8B%EF%BC%9A%0A2)%20%E9%9C%80%E6%B1%82%E7%B0%A1%E8%BF%B0%EF%BC%9A%0A3)%20%E9%A0%90%E7%AE%97%EF%BC%9A%0A4)%20%E9%A0%90%E8%A8%88%E4%B8%8A%E7%B7%9A%E6%99%82%E9%96%93%EF%BC%9A%0A5)%20%E5%8F%83%E8%80%83%E7%AF%84%E4%BE%8B%EF%BC%9A%0A6)%20%E5%85%B6%E4%BB%96%E8%A3%9C%E5%85%85%EF%BC%9A',
+      'mailto:pigeon@pigeon-packet.com?subject=%E9%A0%90%E7%B4%84%E5%88%9D%E8%AB%87&body=%E6%82%A8%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E9%A0%90%E7%B4%84%E5%88%9D%E6%AD%A5%E8%AB%AE%E8%A9%A2%E3%80%82%E4%BB%A5%E4%B8%8B%E6%98%AF%E5%B0%88%E6%A1%88%E9%87%8D%E9%BB%9E%EF%BC%9A%0A1)%20%E5%B0%88%E6%A1%88%E9%A1%9E%E5%9E%8B%EF%BC%9A%0A2)%20%E9%9C%80%E6%B1%82%E7%B0%A1%E8%BF%B0%EF%BC%9A%0A3)%20%E9%A0%90%E7%AE%97%EF%BC%9A%0A4)%20%E9%A0%90%E8%A8%88%E4%B8%8A%E7%B7%9A%E6%99%82%E9%96%93%EF%BC%9A%0A5)%20%E5%8F%83%E8%80%83%E7%AF%84%E4%BE%8B%EF%BC%9A%0A6)%20%E5%85%B6%E4%BB%96%E8%A3%9C%E5%85%85%EF%BC%9A',
     trustLine: '快速團隊也能安心採用的合作流程',
     servicesTitle: '服務範圍',
     services: ['形象網站與活動頁製作', '後台系統與內部工具前端開發', 'API 串接與資料視覺化', 'Azure 可部署架構與 CI/CD 建置'],
@@ -199,7 +199,7 @@ const COPY = {
     contactTitle: '聯絡方式',
     contactBody: '隨時和我聯繫，討論你的專案需求與時程。',
     contactInfo: [
-      { label: 'Email', value: 'pigeonpacket.tech@gmail.com' },
+      { label: 'Email', value: 'pigeon@pigeon-packet.com' },
       { label: '雲端服務', value: 'GCP、AWS、Azure 雲端架設' },
       { label: '前端', value: 'Angular 前端開發' },
       { label: '後端', value: 'C# / Java / PHP 後端開發' },

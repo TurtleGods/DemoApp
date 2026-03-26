@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://demopage-ekbvdgaygqfqafd2.southeastasia-01.azurewebsites.net/sitemap.xml
+Sitemap: https://www.pigeon-packet.com/sitemap.xml

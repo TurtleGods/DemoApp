@@ -1,129 +1,242 @@
-<div class="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors duration-500" [class]="themeClass()">
-  <header
-    class="sticky top-0 z-30 w-full border-b border-[var(--panel-border)] bg-[var(--header)] backdrop-blur-xl"
-  >
-    <div class="mx-auto w-full max-w-6xl px-4 py-3 md:px-8">
-      <div class="flex flex-wrap items-center justify-between gap-3">
-        <div class="flex items-center gap-3">
-          <img src="pigeon-pack.svg" alt="鴿子封包" class="h-11 w-11 rounded-2xl border border-[var(--panel-border)] bg-white/70 p-1 shadow-sm">
-          <div class="inline-flex items-center gap-2 rounded-full bg-[var(--chip)] px-3 py-1 text-xs font-semibold text-[var(--chip-text)]">
-            {{ content().heroBadge }}
-          </div>
+<div class="app-shell">
+  <div class="background-orb background-orb-left"></div>
+  <div class="background-orb background-orb-right"></div>
+  <div class="background-grid"></div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="#top" aria-label="Pigeon Packet home">
+        <img class="brand-lockup__logo" src="pigeon-pack.svg" alt="Pigeon Packet logo">
+        <div class="brand-lockup__text">
+          <span class="brand-lockup__name">Pigeon Packet</span>
+          <span class="brand-lockup__tag">{{ content().brandTag }}</span>
         </div>
-        <nav class="hidden flex-wrap items-center gap-2 text-sm md:flex">
-          <a class="nav-pill" href="#services">{{ content().navServices }}</a>
-          <a class="nav-pill" href="#process">{{ content().navProcess }}</a>
-          <a class="nav-pill" href="#plans">{{ content().navPlans }}</a>
-          <a class="nav-pill" href="#faq">{{ content().navFaq }}</a>
-          <a class="nav-pill" href="#contact">{{ content().navContact }}</a>
-        </nav>
-        <div class="flex flex-wrap items-center gap-2">
-          <div class="surface-switch inline-flex rounded-full border border-[var(--panel-border)] p-1">
-            <button type="button" class="lang-btn" [class.lang-selected]="language() === 'en'" (click)="setLanguage('en')">EN</button>
-            <button type="button" class="lang-btn" [class.lang-selected]="language() === 'zh'" (click)="setLanguage('zh')">
-              {{ content().zhButton }}
-            </button>
-          </div>
-          <div class="surface-switch inline-flex rounded-full border border-[var(--panel-border)] p-1">
-            <button type="button" class="theme-dot bg-[#2563eb]" [class.active]="theme() === 'ocean'" (click)="setTheme('ocean')"></button>
-            <button type="button" class="theme-dot bg-[#059669]" [class.active]="theme() === 'forest'" (click)="setTheme('forest')"></button>
-            <button type="button" class="theme-dot bg-[#ea580c]" [class.active]="theme() === 'sunset'" (click)="setTheme('sunset')"></button>
-            <button type="button" class="theme-dot bg-[#0f172a]" [class.active]="theme() === 'night'" (click)="setTheme('night')"></button>
-          </div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#capabilities">{{ content().navCapabilities }}</a>
+        <a href="#delivery">{{ content().navDelivery }}</a>
+        <a href="#proof">{{ content().navProof }}</a>
+        <a href="#contact">{{ content().navContact }}</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <div class="language-switch" [attr.aria-label]="content().zhButton">
+          <button type="button" [class.is-active]="language() === 'en'" (click)="setLanguage('en')">EN</button>
+          <button type="button" [class.is-active]="language() === 'zh'" (click)="setLanguage('zh')">{{ content().zhButton }}</button>
         </div>
+        <a class="button button--ghost" [href]="content().initialConsultationMailto">{{ content().ctaPrimary }}</a>
       </div>
     </div>
   </header>
 
-  <div class="mx-auto w-full max-w-6xl px-4 pb-12 pt-6 md:px-8">
-    <main class="mt-8 space-y-6">
-      <section class="hero rounded-[2.25rem] border border-[var(--panel-border)] bg-[var(--panel)] p-8 md:p-14">
-        <p class="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--muted)]">{{ content().trustLine }}</p>
-        <h1 class="mt-4 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">{{ content().heroTitle }}</h1>
-        <p class="mt-5 max-w-3xl text-base leading-7 text-[var(--muted)] md:text-lg">{{ content().heroSubtitle }}</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <button class="rounded-full bg-[var(--btn)] px-6 py-3 text-sm font-semibold text-white">{{ content().ctaPrimary }}</button>
-          <a href="#services" class="secondary-btn rounded-full border border-[var(--panel-border)] px-6 py-3 text-sm font-semibold">
-            {{ content().ctaSecondary }}
-          </a>
-        </div>
-      </section>
+  <main id="top" class="site-main">
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">{{ content().heroEyebrow }}</p>
+        <h1>{{ content().heroTitle }}</h1>
+        <p class="hero__subtitle">{{ content().heroSubtitle }}</p>
 
-      <section id="services" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
-        <h2 class="text-2xl font-semibold">{{ content().servicesTitle }}</h2>
-        <div class="mt-4 grid gap-3 md:grid-cols-2">
-          @for (item of content().services; track item) {
-            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-5 text-sm md:text-base">{{ item }}</article>
-          }
+        <div class="hero__actions">
+          <a class="button button--primary" [href]="content().initialConsultationMailto">{{ content().ctaPrimary }}</a>
+          <a class="button button--ghost" href="#capabilities">{{ content().ctaSecondary }}</a>
         </div>
-      </section>
 
-      <section id="process" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
-        <h2 class="text-2xl font-semibold">{{ content().processTitle }}</h2>
-        <div class="mt-4 grid gap-3 md:grid-cols-2">
-          @for (item of content().process; track item) {
-            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-5 text-sm md:text-base">{{ item }}</article>
-          }
-        </div>
-      </section>
-
-      <section id="plans" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
-        <h2 class="text-2xl font-semibold">{{ content().plansTitle }}</h2>
-        <div class="mt-4 grid gap-3 md:grid-cols-3">
-          @for (plan of content().plans; track plan.name) {
-            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-6">
-              <h3 class="text-lg font-semibold">{{ plan.name }}</h3>
-              <p class="mt-2 text-sm leading-6 text-[var(--muted)]">{{ plan.detail }}</p>
+        <div class="hero__stats">
+          @for (item of content().heroStats; track item.label) {
+            <article class="stat-card">
+              <p class="stat-card__value">{{ item.value }}</p>
+              <p class="stat-card__label">{{ item.label }}</p>
             </article>
           }
         </div>
-      </section>
 
-      <section class="rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
-        <h2 class="text-2xl font-semibold">{{ content().showcaseTitle }}</h2>
-        <div class="mt-4 grid gap-3 md:grid-cols-3">
-          @for (item of content().showcases; track item.title) {
-            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-6">
-              <h3 class="text-base font-semibold">{{ item.title }}</h3>
-              <p class="mt-2 text-sm leading-6 text-[var(--muted)]">{{ item.detail }}</p>
-            </article>
-          }
-        </div>
-      </section>
+        <article class="hero-inline-visual">
+          <img src="hero-pigeon-packet-banner-v2.png" alt="Minimal Pigeon Packet branded technology visual with a symbolic pigeon, package, and cloud delivery elements">
+        </article>
+      </div>
 
-      <section id="faq" class="scroll-mt-24 rounded-[2rem] border border-[var(--panel-border)] bg-[var(--panel)] p-6 md:p-8">
-        <h2 class="text-2xl font-semibold">{{ content().faqTitle }}</h2>
-        <div class="mt-4 grid gap-3">
-          @for (item of content().faqs; track item.q) {
-            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-5">
-              <h3 class="text-sm font-semibold md:text-base">{{ item.q }}</h3>
-              <p class="mt-2 text-sm leading-6 text-[var(--muted)]">{{ item.a }}</p>
-            </article>
-          }
-        </div>
-      </section>
+      <div class="hero__panel">
+        <article class="hero-visual-card">
+          <img src="hero-tech-delivery.png" alt="Technology delivery visual with cloud, systems, and connected platform components">
+        </article>
 
-      <section id="contact" class="scroll-mt-24 rounded-[2.25rem] border border-[var(--panel-border)] bg-[var(--panel)] p-8 md:p-12">
-        <h2 class="text-3xl font-semibold md:text-4xl">{{ content().contactTitle }}</h2>
-        <p class="mt-4 max-w-3xl text-sm leading-7 text-[var(--muted)] md:text-base">{{ content().closingBody }}</p>
-        <div class="mt-6 grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
-          @for (item of content().contactInfo; track item.label) {
-            <article class="rounded-3xl border border-[var(--panel-border)] bg-[var(--card)] p-4">
-              <p class="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">{{ item.label }}</p>
-              <p class="mt-2 text-sm font-medium text-[var(--text)]">{{ item.value }}</p>
-            </article>
-          }
+        <article class="surface-card surface-card--accent">
+          <p class="surface-card__eyebrow">{{ content().heroPanelTitle }}</p>
+          <ul class="signal-list">
+            @for (item of content().heroPanelItems; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+
+        <article class="surface-card">
+          <p class="surface-card__eyebrow">{{ content().heroSignalTitle }}</p>
+          <div class="signal-chips">
+            @for (item of content().heroSignals; track item) {
+              <span>{{ item }}</span>
+            }
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="proof" class="section-block">
+      <div class="section-heading">
+        <p class="section-label">{{ content().navProof }}</p>
+        <h2>{{ content().proofTitle }}</h2>
+        <p>{{ content().proofIntro }}</p>
+      </div>
+
+      <div class="card-grid card-grid--triple">
+        @for (item of content().proofCards; track item.title) {
+          <article class="info-card">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.detail }}</p>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section id="capabilities" class="section-block">
+      <div class="section-heading">
+        <p class="section-label">{{ content().navCapabilities }}</p>
+        <h2>{{ content().capabilitiesTitle }}</h2>
+        <p>{{ content().capabilitiesIntro }}</p>
+      </div>
+
+      <div class="card-grid card-grid--triple">
+        @for (item of content().capabilities; track item.title) {
+          <article class="info-card info-card--feature">
+            <div class="feature-icon" [attr.aria-label]="item.title">
+              @if (item.icon === 'web') {
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <rect x="8" y="10" width="32" height="24" rx="6"></rect>
+                  <path d="M8 18h32"></path>
+                  <path d="M18 38h12"></path>
+                  <path d="M24 34v4"></path>
+                </svg>
+              }
+              @if (item.icon === 'system') {
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <rect x="9" y="9" width="12" height="12" rx="3"></rect>
+                  <rect x="27" y="9" width="12" height="12" rx="3"></rect>
+                  <rect x="9" y="27" width="12" height="12" rx="3"></rect>
+                  <rect x="27" y="27" width="12" height="12" rx="3"></rect>
+                  <path d="M21 15h6M15 21v6M33 21v6M21 33h6"></path>
+                </svg>
+              }
+              @if (item.icon === 'cloud') {
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M16 35h18a7 7 0 0 0 1-14 11 11 0 0 0-20-3 8 8 0 0 0 1 17Z"></path>
+                  <path d="M24 20v12"></path>
+                  <path d="m19.5 27 4.5 5 4.5-5"></path>
+                </svg>
+              }
+            </div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.detail }}</p>
+          </article>
+        }
+      </div>
+
+      <div class="capability-visual-grid">
+        <article class="capability-visual-card">
+          <img src="capability-business-systems.png" alt="Business systems and dashboard development visual">
+        </article>
+        <article class="capability-visual-card">
+          <img src="capability-cloud-delivery.png" alt="Cloud delivery and deployment pipeline visual">
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block section-block--stack">
+      <div class="section-heading">
+        <p class="section-label">{{ content().stackTitle }}</p>
+        <h2>{{ content().stackTitle }}</h2>
+      </div>
+
+      <div class="stack-pills">
+        @for (item of content().stackItems; track item) {
+          <span>{{ item }}</span>
+        }
+      </div>
+    </section>
+
+    <section id="delivery" class="section-block">
+      <div class="section-heading">
+        <p class="section-label">{{ content().navDelivery }}</p>
+        <h2>{{ content().deliveryTitle }}</h2>
+      </div>
+
+      <div class="timeline-grid">
+        @for (item of content().deliverySteps; track item.index) {
+          <article class="timeline-card">
+            <p class="timeline-card__index">{{ item.index }}</p>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.detail }}</p>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="section-label">{{ content().engagementTitle }}</p>
+        <h2>{{ content().engagementTitle }}</h2>
+      </div>
+
+      <div class="card-grid card-grid--triple">
+        @for (item of content().engagementCards; track item.title) {
+          <article class="info-card">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.detail }}</p>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-section__copy">
+        <p class="section-label">{{ content().contactTitle }}</p>
+        <h2>{{ content().closingTitle }}</h2>
+        <p>{{ content().closingBody }}</p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" [href]="content().closingConsultationMailto">{{ content().closingCta }}</a>
+          <span class="contact-section__note">{{ content().contactBody }}</span>
         </div>
-        <div class="mt-6 flex flex-wrap items-center gap-3">
-          <a
-            class="rounded-full bg-[var(--btn)] px-6 py-3 text-sm font-semibold text-white"
-            href="{{ content().closingConsultationMailto }}"
-          >
-            {{ content().closingCta }}
-          </a>
-          <span class="text-sm text-[var(--muted)]">{{ content().contactBody }}</span>
+      </div>
+
+      <div class="contact-grid">
+        @for (item of content().contactInfo; track item.label) {
+          <article class="contact-card">
+            <p class="contact-card__label">{{ item.label }}</p>
+            <p class="contact-card__value">{{ item.value }}</p>
+          </article>
+        }
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="pigeon-pack.svg" alt="Pigeon Packet logo">
+        <div>
+          <p class="site-footer__company">{{ content().footerCompany }}</p>
+          <p class="site-footer__rights">{{ content().footerRights }}</p>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+
+      <a
+        class="site-footer__contact"
+        [href]="content().footerLineHref"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="'LINE ' + content().footerLineValue"
+      >
+        <span class="site-footer__label">{{ content().footerLineLabel }}</span>
+        <span class="site-footer__value">{{ content().footerLineValue }}</span>
+      </a>
+    </footer>
+  </main>
 </div>
